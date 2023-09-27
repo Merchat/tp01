@@ -1,0 +1,16 @@
+{% block body %}
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">titre</th>
+            <th scope="col">directeur</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for picture in pictures %}
+        <td>{{ picture['title'] }}</td>
+        <td>{{ picture['director'] }}</td>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
