@@ -13,8 +13,7 @@ def home():
 def show_pictures():
        return render_template('pictures.html', pictures=pictures)
 
-@app.route('/api/picture/<id>')
-
+@app.route('/api/picture/<int:id>')
 def getpictureid(id):
        id=int(id)
        picture=None
@@ -25,6 +24,4 @@ def getpictureid(id):
 # def shuffle_pictures():
 #        random.shuffle(pictures)
 
-# if __name__ == '__main__':
-#        shuffle_pictures()
-#        app.run(debug=True)
+
